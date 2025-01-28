@@ -8,9 +8,6 @@ def suma():
 
     return resultado
 
-def multiplicar(a, b):
-    return a * b
-
 # Función para calcular la potencia
 def calcular_potencia(base, exponente):
     """
