@@ -1,9 +1,13 @@
-# Pedir al usuario que ingrese dos números
-numero1 = int(input("Introduce el primer número: "))
-numero2 = int(input("Introduce el segundo número: "))
 
-# Sumar los números
-resultado = numero1 + numero2
+def suma():
+    numero_uno = int(input("Introduce el primer número: "))
+    numero_dos = int(input("Introduce el segundo número: "))
+    resultado = numero_uno + numero_dos 
 
-# Imprimir el resultado
-print("La suma es:", resultado)
+    print("La suma es:", resultado)
+
+    return resultado
+
+def multiplicar(a, b):
+    return a * b
+
