@@ -1,18 +1,13 @@
 from datetime import datetime
 
 #TODO
-def format_date(date):
-   
-    fecha_formato_uno = date.strftime('%Y-%m-%d')
-    print("Formato 1 YYYY-MM-DD:",fecha_formato_uno)
+def format_date(date,b=None, format_type='%Y-%m-%d'):
 
-    fecha_formato_dos = date.strftime('%d/%m/%Y')
-    print("Formato 2 DD-MM-YYYY:",fecha_formato_dos)    
+    if not format_type in ['%d/%m/%Y','%m/%d/%Y']:
+        return date.strftime('%Y-%m-%d')
+    return date.strftime(format_type)    
 
-    fecha_formato_tres = date.strftime('%m/%d/%Y')
-    print("Formato 2 DD-MM-YYYY:",fecha_formato_tres)    
-   
-    return 
+
 #TODO
 def format_currency(amount, currency="USD"):
     """
@@ -26,4 +21,5 @@ def format_decimal(number, decimal_places=2):
 
 
 date = datetime.now()
-format_date(date)
+fecha_formato_uno = format_date(date=date, format_type='%dfsdfY', b=1)
+print(fecha_formato_uno)
