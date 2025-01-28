@@ -1,4 +1,5 @@
+def multiplicar(a, b):
+    return a * b
+
 def resta (a , b):
     return a - b
-
-print("Resta: ", resta(5, 3))
