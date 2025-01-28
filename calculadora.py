@@ -10,9 +10,9 @@ def calcular_potencia(base, exponente):
 
 # FUNCION DE DIVISION
 
-def dividir_numeros(num1, num2):
+def dividir_numeros(dividendo, divisor):
     try:
-        resultado = num1 / num2
+        resultado = dividendo / divisor
         return resultado
     except ZeroDivisionError:
         return "Error: No se puede dividir entre cero."
