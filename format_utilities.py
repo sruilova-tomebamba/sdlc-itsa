@@ -16,3 +16,5 @@ def format_currency(amount, currency="USD"):
 
 def format_decimal(number, decimal_places=2):
     return f"{number:.{decimal_places}f}"
+
+
