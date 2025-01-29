@@ -1,4 +1,5 @@
 from datetime import datetime
+import sys
 
 #TODO
 def format_date(date,b=None, format_type='%Y-%m-%d'):
@@ -9,12 +10,21 @@ def format_date(date,b=None, format_type='%Y-%m-%d'):
 
 
 #TODO
-def format_currency(amount, currency="USD"):
-    """
-    Pendiente de desarrollo
-    """
-
-
+def format_currency(amount, currency = 'USD'):
+    if currency=="USD":
+        euro=(amount*0.95)
+        peso_mx=(amount*20.55)
+        return f"EUR: {euro} MXN: {peso_mx}"
+    elif currency=="EUR":
+        dolar=(amount*1.04)
+        peso_mx=(amount*21.43)
+        return f"USD: {dolar} MXN: {peso_mx}"
+    elif currency=="MXN":
+        dolar=(amount*0.050)
+        euro=(amount*0.047)
+        return f"USD: {dolar} EUR: {euro}"
+    else:
+        return "TIPO NO PERMITIDO"
 
 def format_decimal(number, decimal_places=2):
     return f"{number:.{decimal_places}f}"
